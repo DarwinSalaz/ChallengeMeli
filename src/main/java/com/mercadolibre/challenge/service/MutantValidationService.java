@@ -23,7 +23,7 @@ public class MutantValidationService {
 
     public Boolean isMutant (String[] dna) throws ValidationError {
         DnaHistory dnaHistory = findDnaHistory(dna);
-        // Si ya existe un registro del adn obtenemos directamente si es clasificado como mutante
+        // Si ya existe un registro del adn obtenemos directamente si es clasificado como mutante desde la bd
         if (dnaHistory != null) {
             return dnaHistory.getIsMutant();
         }
@@ -74,6 +74,7 @@ public class MutantValidationService {
     }
 
     // Valida en la dirección si hay posibilidad de una secuencia
+    // V -> Vertical * H -> Horizontal * OL -> Oblicuo Izquierdo * OR -> Oblicuo Derecho
     private boolean validatePossibleSeq (String orientation, int row, int column, char[][] matrixDNA) {
         char charComp = matrixDNA[row][column];
         char c;

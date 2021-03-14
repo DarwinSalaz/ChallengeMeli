@@ -11,7 +11,7 @@ de su ADN, almacenando la información para generación de estadisticas que igua
 
 ## Uso API Rest
 
-* Itentificar mutante
+* Identificar mutante
 ```
 # URL
 
@@ -39,7 +39,7 @@ POST - http://challengemeli-dev.us-east-2.elasticbeanstalk.com:80/mutant/
 
 ```
 
-* Itentificar mutante
+* Consultar Estadisticas
 ```
 # URL
 
