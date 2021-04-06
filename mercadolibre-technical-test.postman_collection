@@ -1,0 +1,191 @@
+{
+	"info": {
+		"_postman_id": "f917d9d0-b401-4e66-b235-4cbfd3cfd3ee",
+		"name": "mercadolibre",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Consultar Estadisticas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://challengemeli-dev.us-east-2.elasticbeanstalk.com:80/stats",
+					"protocol": "http",
+					"host": [
+						"challengemeli-dev",
+						"us-east-2",
+						"elasticbeanstalk",
+						"com"
+					],
+					"port": "80",
+					"path": [
+						"stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar mutante - isMutant -> true",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dna\": [\r\n        \"AAGTT\",\r\n        \"AGTGG\",\r\n        \"ATGTA\",\r\n        \"AGAGT\",\r\n        \"GTCCG\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://challengemeli-dev.us-east-2.elasticbeanstalk.com:80/mutant/",
+					"protocol": "http",
+					"host": [
+						"challengemeli-dev",
+						"us-east-2",
+						"elasticbeanstalk",
+						"com"
+					],
+					"port": "80",
+					"path": [
+						"mutant",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar mutante - isMutant -> false",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dna\": [\r\n        \"AAGTT\",\r\n        \"GAGGG\",\r\n        \"ATGTA\",\r\n        \"AGAAT\",\r\n        \"GTCCT\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://challengemeli-dev.us-east-2.elasticbeanstalk.com:80/mutant/",
+					"protocol": "http",
+					"host": [
+						"challengemeli-dev",
+						"us-east-2",
+						"elasticbeanstalk",
+						"com"
+					],
+					"port": "80",
+					"path": [
+						"mutant",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar mutante - Validacion Tamaño Info",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dna\": [\r\n        \"AAGTT\",\r\n        \"GAGG\",\r\n        \"ATGTA\",\r\n        \"AGAAT\",\r\n        \"GTCCT\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://challengemeli-dev.us-east-2.elasticbeanstalk.com:80/mutant/",
+					"protocol": "http",
+					"host": [
+						"challengemeli-dev",
+						"us-east-2",
+						"elasticbeanstalk",
+						"com"
+					],
+					"port": "80",
+					"path": [
+						"mutant",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar mutante - Validacion Caracteres",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dna\": [\r\n        \"AAGTT\",\r\n        \"LLLLL\",\r\n        \"ATGTA\",\r\n        \"AGAAT\",\r\n        \"GTCCT\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://challengemeli-dev.us-east-2.elasticbeanstalk.com:80/mutant/",
+					"protocol": "http",
+					"host": [
+						"challengemeli-dev",
+						"us-east-2",
+						"elasticbeanstalk",
+						"com"
+					],
+					"port": "80",
+					"path": [
+						"mutant",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar mutante - Validacion NotNull",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dna\": [\r\n        \"AAGTT\",\r\n        null,\r\n        \"ATGTA\",\r\n        \"AGAAT\",\r\n        \"GTCCT\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://challengemeli-dev.us-east-2.elasticbeanstalk.com:80/mutant/",
+					"protocol": "http",
+					"host": [
+						"challengemeli-dev",
+						"us-east-2",
+						"elasticbeanstalk",
+						"com"
+					],
+					"port": "80",
+					"path": [
+						"mutant",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
